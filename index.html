@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio-Kompendium | Das vollständige Wissens-Archiv</title>
+    <title>Portfolio-Kompendium | Gedanken zum Investieren</title>
     <style>
         :root {
             --primary: #1a365d;
@@ -14,86 +14,125 @@
             --white: #ffffff;
             --danger: #e53e3e;
         }
+
+        /* Grund-Layout */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             line-height: 1.6;
             color: var(--text);
             background-color: var(--bg);
             margin: 0;
             padding: 0;
+            -webkit-text-size-adjust: 100%; /* Verhindert Font-Resize bei iOS Orientierung */
         }
+
         header {
             background: var(--primary);
             color: var(--white);
-            padding: 4rem 1rem;
+            padding: 3rem 1rem;
             text-align: center;
         }
+
         .container {
             max-width: 1100px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+            margin: 1rem auto;
+            padding: 0 0.75rem; /* Weniger Margin am Rand für Mobile */
         }
-        h1 { margin: 0; font-size: 2.8rem; }
-        h2 { color: var(--primary); border-bottom: 3px solid var(--accent); padding-bottom: 0.5rem; margin-top: 3.5rem; }
-        h3 { color: var(--secondary); margin-top: 2rem; border-left: 4px solid var(--secondary); padding-left: 1rem; }
+
+        /* Typography Optimierung */
+        h1 { margin: 0; font-size: 2rem; line-height: 1.2; }
+        h2 { color: var(--primary); border-bottom: 3px solid var(--accent); padding-bottom: 0.5rem; margin-top: 2.5rem; font-size: 1.5rem; }
+        h3 { color: var(--secondary); margin-top: 1.8rem; border-left: 4px solid var(--secondary); padding-left: 0.75rem; font-size: 1.25rem; }
+
+        /* Card-Anpassung für Mobile */
         .card {
             background: var(--white);
-            padding: 2.5rem;
+            padding: 1.5rem; /* Standard für Mobile */
             border-radius: 12px;
-            box-shadow: 0 10px 15px rgba(0,0,0,0.05);
-            margin-bottom: 3rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+            overflow-wrap: break-word; /* Verhindert Text-Überlauf */
         }
+
+        /* Responsive Tabellen-Container */
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto; /* Erlaubt horizontales Scrollen auf dem iPhone */
+            -webkit-overflow-scrolling: touch;
+            margin: 1.5rem 0;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 1.5rem 0;
             font-size: 0.85rem;
+            min-width: 600px; /* Erzwingt Scrollen statt Quetschen auf Mobile */
         }
+
         th, td {
             text-align: left;
-            padding: 12px;
+            padding: 10px;
             border-bottom: 1px solid #e2e8f0;
         }
-        th { background-color: #edf2f7; color: var(--primary); }
-        tr:hover { background-color: #f8fafc; }
+
+        th { background-color: #edf2f7; color: var(--primary); white-space: nowrap; }
+
+        /* Dekorative Elemente */
         .quote {
             border-left: 5px solid var(--accent);
-            padding: 1.5rem;
+            padding: 1rem;
             background: #fffaf0;
             font-style: italic;
             margin: 1.5rem 0;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
+
         .tag {
             display: inline-block;
             background: var(--secondary);
             color: white;
-            padding: 0.3rem 0.8rem;
+            padding: 0.2rem 0.7rem;
             border-radius: 20px;
-            font-size: 0.85rem;
-            margin-bottom: 1rem;
+            font-size: 0.75rem;
+            margin-bottom: 0.75rem;
             font-weight: bold;
         }
+
         .expert-note {
             background: #e2e8f0;
-            padding: 1.5rem;
+            padding: 1rem;
             border-radius: 8px;
-            font-size: 1rem;
+            font-size: 0.95rem;
             margin: 1.5rem 0;
             border-left: 5px solid var(--primary);
         }
+
         .warning {
             border: 2px solid var(--danger);
-            padding: 1.5rem;
+            padding: 1rem;
             background: #fff5f5;
             margin: 1.5rem 0;
             border-radius: 8px;
         }
-        .highlight {
-            color: var(--accent);
-            font-weight: bold;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 1.5rem auto;
         }
-        ul li { margin-bottom: 0.5rem; }
+
+        /* Desktop-Optimierung (größerer Screen) */
+        @media (min-width: 768px) {
+            header { padding: 5rem 1rem; }
+            h1 { font-size: 2.8rem; }
+            h2 { font-size: 2rem; }
+            .card { padding: 2.5rem; }
+            .container { margin: 2rem auto; }
+            .table-wrapper { border: none; } /* Rahmen weg auf Desktop */
+        }
     </style>
 </head>
 <body>
@@ -121,11 +160,11 @@
         <h2>Das 1-ETF-Portfolio (Die "Fire & Forget“-Effizienz)</h2>
         <p>Die einfachste Form des Investierens ist oft die effektivste. Die Kern-Logik folgt der <strong>Marktkapitalisierung</strong>: Das Portfolio passt sich automatisch dem Wandel der Weltwirtschaft an.
         Das ist grundsätzlich auch die einfachste Art zu investieren, weil Sie völlig autark läuft. 
-    Aber wo ist jetzt der Haken? Manche Stimmen bemängeln, dass mittlerweile die Gewichte gewisser Regionen und einzelner Unternehmen viel zu hoch sind, und man diese Strategie nicht mehr als breite Diversifikation bezeichnen kann.
-    Hierzu gehört z.B. Gerd Kommer, oder viele andere. Diese Strategie bildet stumpf "den Markt" ab. 
-    Wenn jemand in der Finanzwelt davon spricht den Markt zu schlagen, dann meint man immer die Gesamtheit des investierbaren Kapitalmarkts des Assets Aktien.
-    Die Gewichtung der Marktkapitalisierung ist sehr einfach zu verstehen, desto größer die Summe des gesamten Werts der Wertpapiere eines Unternehmens, desto größer das Gewicht im Portfolio. Genau das machen die ETFs, die ich fortfolgend vorschlage für einen.
-</p>
+        Aber wo ist jetzt der Haken? Manche Stimmen bemängeln, dass mittlerweile die Gewichte gewisser Regionen und einzelner Unternehmen viel zu hoch sind, und man diese Strategie nicht mehr als breite Diversifikation bezeichnen kann.
+        Hierzu gehört z.B. Gerd Kommer, oder viele andere. Diese Strategie bildet stumpf "den Markt" ab. 
+        Wenn jemand in der Finanzwelt davon spricht den Markt zu schlagen, dann meint man immer die Gesamtheit des investierbaren Kapitalmarkts des Assets Aktien.
+        Die Gewichtung der Marktkapitalisierung ist sehr einfach zu verstehen, desto größer die Summe des gesamten Werts der Wertpapiere eines Unternehmens, desto größer das Gewicht im Portfolio. Genau das machen die ETFs, die ich fortfolgend vorschlage für einen.
+        </p>
         
         <h3>1. Thesaurierend vs. Ausschüttend</h3>
         <p>Ich empfehle klar thesaurierende Varianten aus zwei Gründen:</p>
@@ -147,31 +186,29 @@
         <div class="warning">
             <strong>Gefahr:</strong> Eine Liquidation zwingt dich zum Verkauf, was Steuern auf alle bisherigen Gewinne sofort fällig macht – dieser "Steuerfraß" wiegt meist deutlich schwerer als eine geringfügig höhere TER.
         </div>
-<p>Damit du mal siehst, was es konkret heißt, sprich wie stark die ETFs wirklich unterschiedlich performen sieht man in folgender Abbildung. Siehst du da einen großen Unterschied? Nein? Ich auch nicht.
-</p>
-<div class="card">
-    <h2>Visualisierung der Performance der Anbieter </h2>
-    <p>4 Indexe im Vergleich</p>
-    
-    <img src="1-ETF-Vergleich.png" alt="Weltkarte der Marktkapitalisierung" style="width:100%; max-width:800px; border-radius:12px; margin: 20px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-    
-    <p style="font-size: 0.8rem; color: #666; text-align: center;">Abbildung 1: 4 Index Kandidaten im Performance Vergleich</p>
-</div>
- <p>Wenn du mal selbst ETFs vergleichen willst, kannst du das unter 
-   <a href="https://www.finanzfluss.de/informer/etf/vergleich" target="_blank">Finanzfluss ETF-Vergleich</a> machen.
-</p> 
+        <p>Damit du mal siehst, was es konkret heißt, sprich wie stark die ETFs wirklich unterschiedlich performen sieht man in folgender Abbildung. Siehst du da einen großen Unterschied? Nein? Ich auch nicht.</p>
+        
+        <img src="1-ETF-Vergleich.png" alt="Performance der Anbieter" style="border-radius:12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        
+        <p style="font-size: 0.8rem; color: #666; text-align: center;">Abbildung 1: 4 Index Kandidaten im Performance Vergleich</p>
 
-        <table>
-            <thead>
-                <tr><th>Index-Kandidaten</th><th>ISIN</th><th>TER</th><th>Abdeckung</th><th>Fondvolumen (Anteilsklasse)</th><th>Kommentar</th></tr>
-            </thead>
-            <tbody>
-                <tr><td>Vanguard FTSE All-World</td><td>IE00BK5BQT80</td><td>0,22%</td><td>~90-95%</td><td>~25 Mrd. €</td><td>Der Goldstandard</td></tr>
-                <tr><td>iShares MSCI ACWI</td><td>IE00B6R52259</td><td>0,20%</td><td>~85%</td><td>~12 Mrd. €</td><td>Marktführer-Alternative</td></tr>
-                <tr><td>SPDR MSCI ACWI IMI</td><td>IE00B3YLTY66</td><td>0,17%</td><td>~99%</td><td>~8 Mrd. €</td><td>Inkl. Small Caps</td></tr>
-                <tr><td>Amundi Prime All Country</td><td>IE0009HF1MK9</td><td>0,07%</td><td>~85%</td><td>~1,2 Mrd. €</td><td>Preisbrecher</td></tr>
-            </tbody>
-        </table>
+        <p>Wenn du mal selbst ETFs vergleichen willst, kannst du das unter 
+          <a href="https://www.finanzfluss.de/informer/etf/vergleich" target="_blank">Finanzfluss ETF-Vergleich</a> machen.
+        </p> 
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Index-Kandidaten</th><th>ISIN</th><th>TER</th><th>Abdeckung</th><th>Fondvolumen</th><th>Kommentar</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Vanguard FTSE All-World</td><td>IE00BK5BQT80</td><td>0,22%</td><td>~90-95%</td><td>~25 Mrd. €</td><td>Der Goldstandard</td></tr>
+                    <tr><td>iShares MSCI ACWI</td><td>IE00B6R52259</td><td>0,20%</td><td>~85%</td><td>~12 Mrd. €</td><td>Marktführer-Alternative</td></tr>
+                    <tr><td>SPDR MSCI ACWI IMI</td><td>IE00B3YLTY66</td><td>0,17%</td><td>~99%</td><td>~8 Mrd. €</td><td>Inkl. Small Caps</td></tr>
+                    <tr><td>Amundi Prime All Country</td><td>IE0009HF1MK9</td><td>0,07%</td><td>~85%</td><td>~1,2 Mrd. €</td><td>Preisbrecher</td></tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <div class="card">
@@ -184,33 +221,32 @@
             <li><strong>BIP-Gewichtung:</strong> In einem Standard-ACWI machen Schwellenländer nur ca. 10% aus. 70/30 rückt das Portfolio näher an die reale Wirtschaftsleistung (BIP).</li>
             <li><strong>Markowitz-Optimierung:</strong> Historische Rückrechnungen zeigen oft, dass bei ca. 30% EM die ideale Sharpe Ratio (Rendite-Risiko-Verhältnis) lag.</li>
         </ul>
-<div class="card">
-<p>Hier das beste Video, dass ich mir je bzgl. dem Vergleich verschiedener EM Gewichte angesehen habe. Der Typ ist auch Data Scientist, und macht nicht das typische nachplappern von anderen, sondern geht wissenschaftlich vor:
-   <a href="https://www.finanzfluss.de/informer/etf/vergleich" target="_blank">Video auf Notgroschen YouTube Channel</a>
-</p>
-    
-    <h2>Vergleich verschiedener Gewichtungen von Emerging Markets (=EM) </h2>
-    <p>Auszug aus YouTube Video. Hier seht ihr unter "Risikoadjustierung" und unter "GDP (=BIP): Länder mit Exposure" jeweils wo die ominösen 30% eigentlich herkommen.</p>
-    
-    <img src="EM-vs-World-Strategien.png" alt="Weltkarte der Marktkapitalisierung" style="width:100%; max-width:800px; border-radius:12px; margin: 20px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-    
-    <p style="font-size: 0.8rem; color: #666; text-align: center;">Abbildung 2: EM Gewichte im Vergleich</p>
-</div>
+        
+        <p>Hier das beste Video, dass ich mir je bzgl. dem Vergleich verschiedener EM Gewichte angesehen habe. Der Typ ist auch Data Scientist, und macht nicht das typische nachplappern von anderen, sondern geht wissenschaftlich vor:
+           <a href="https://www.finanzfluss.de/informer/etf/vergleich" target="_blank">Video auf Notgroschen YouTube Channel</a>
+        </p>
+        
+        <img src="EM-vs-World-Strategien.png" alt="EM Gewichte Vergleich" style="border-radius:12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        
+        <p style="font-size: 0.8rem; color: #666; text-align: center;">Abbildung 2: EM Gewichte im Vergleich</p>
+
         <div class="warning">
             <strong>Risikoadjustierung: Kritische Einordnung:</strong> "Historische Simulationen nach Markowitz sind kein Blick in die Kristallkugel." Nur weil 30% in der Vergangenheit optimal waren, muss das nicht für die Zukunft gelten. 
             <br><br>
             <strong>Das Exposure-Problem:</strong> Viele Unternehmen im MSCI World erzielen gewaltige Umsätze in Schwellenländern. Wer stur nach BIP gewichtet, übersieht dieses indirekte Exposure und gewichtet EM faktisch oft doppelt. Deshalb darf man nicht auf "GDP: Länder" gucken, sondern auf "Länder mit Exposure"
         </div>
 
-        <table>
-            <thead>
-                <tr><th>Komponente</th><th>ISIN</th><th>TER</th><th>Zweck</th><th>AUM (ca.)</th></tr>
-            </thead>
-            <tbody>
-                <tr><td>70% MSCI World (Core)</td><td>IE00B4L5Y983</td><td>0,20%</td><td>Industrieländer</td><td>~75 Mrd. €</td></tr>
-                <tr><td>30% EM IMI (Core)</td><td>IE00BKM4GZ66</td><td>0,18%</td><td>Schwellenl. inkl. Small</td><td>~20 Mrd. €</td></tr>
-            </tbody>
-        </table>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Komponente</th><th>ISIN</th><th>TER</th><th>Zweck</th><th>AUM (ca.)</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>70% MSCI World (Core)</td><td>IE00B4L5Y983</td><td>0,20%</td><td>Industrieländer</td><td>~75 Mrd. €</td></tr>
+                    <tr><td>30% EM IMI (Core)</td><td>IE00BKM4GZ66</td><td>0,18%</td><td>Schwellenl. inkl. Small</td><td>~20 Mrd. €</td></tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <div class="card">
@@ -225,16 +261,18 @@
             <strong>Die "1%-Lücke":</strong> Theoretisch fehlen selbst hier noch die "Micro Caps". Diese machen etwa 1% der Welt aus, sind aber aufgrund mangelnder Liquidität kaum sinnvoll abzubilden. Dieses Modell ist das Maximum an investierbarer Diversifikation.
         </div>
 
-        <table>
-            <thead>
-                <tr><th>Gewichtung</th><th>Komponente</th><th>ISIN</th><th>TER</th><th>Abdeckung</th></tr>
-            </thead>
-            <tbody>
-                <tr><td>59,5%</td><td>MSCI World (Large/Mid)</td><td>IE00B4L5Y983</td><td>0,20%</td><td>Industrie Basis</td></tr>
-                <tr><td>10,5%</td><td>MSCI World Small Cap</td><td>IE00BF4RFH31</td><td>0,35%</td><td>Industrie Smalls</td></tr>
-                <tr><td>30,0%</td><td>Emerging Markets IMI</td><td>IE00BKM4GZ66</td><td>0,18%</td><td>Schwellenl. Full</td></tr>
-            </tbody>
-        </table>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Gewichtung</th><th>Komponente</th><th>ISIN</th><th>TER</th><th>Abdeckung</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>59,5%</td><td>MSCI World (Large/Mid)</td><td>IE00B4L5Y983</td><td>0,20%</td><td>Industrie Basis</td></tr>
+                    <tr><td>10,5%</td><td>MSCI World Small Cap</td><td>IE00BF4RFH31</td><td>0,35%</td><td>Industrie Smalls</td></tr>
+                    <tr><td>30,0%</td><td>Emerging Markets IMI</td><td>IE00BKM4GZ66</td><td>0,18%</td><td>Schwellenl. Full</td></tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <div class="card">
@@ -254,16 +292,18 @@
         <p>Mit dem <strong>MSCI World ex USA</strong> lässt sich das US-Gewicht auf 40-50% herunterschrauben. 
             Man imitiert die regionale Verteilung des Gerd Kommer ETFs, ohne dessen höhere Gebührenstruktur (0,5% TER) zu tragen.</p>
 
-        <table>
-            <thead>
-                <tr><th>Baustein</th><th>ISIN</th><th>TER</th><th>Zweck</th><th>AUM (ca.)</th></tr>
-            </thead>
-            <tbody>
-                <tr><td>S&P 500 (USA)</td><td>IE00B5BMR087</td><td>0,07%</td><td>USA Core</td><td>~90 Mrd. €</td></tr>
-                <tr><td>MSCI World ex USA</td><td>IE000R4ZNTN3</td><td>0,15%</td><td>Industriel. ohne USA</td><td>~1,8 Mrd. €</td></tr>
-                <tr><td>EM IMI</td><td>IE00BKM4GZ66</td><td>0,18%</td><td>Schwellenländer</td><td>~20 Mrd. €</td></tr>
-            </tbody>
-        </table>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Baustein</th><th>ISIN</th><th>TER</th><th>Zweck</th><th>AUM (ca.)</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>S&P 500 (USA)</td><td>IE00B5BMR087</td><td>0,07%</td><td>USA Core</td><td>~90 Mrd. €</td></tr>
+                    <tr><td>MSCI World ex USA</td><td>IE000R4ZNTN3</td><td>0,15%</td><td>Industriel. ohne USA</td><td>~1,8 Mrd. €</td></tr>
+                    <tr><td>EM IMI</td><td>IE00BKM4GZ66</td><td>0,18%</td><td>Schwellenländer</td><td>~20 Mrd. €</td></tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <div class="card">
@@ -280,29 +320,30 @@
             <strong>Psychologie vs. Performance:</strong> Im 9-ETF-Depot hast du immer eine "Looser-Position", die dich rot anstarrt (z.B. Pazifik ex Japan). Die Versuchung, die Strategie zu brechen, ist hier am höchsten.
         </div>
 
-        <table>
-            <thead>
-                <tr><th>Region</th><th>ISIN</th><th>TER</th><th>ETF Name</th><th>AUM (ca.)</th></tr>
-            </thead>
-            <tbody>
-                <tr><td>USA Large</td><td>IE000XZSV718</td><td>0,03%</td><td>SPDR S&P 500</td><td>~10 Mrd. €</td></tr>
-                <tr><td>USA Mid</td><td>IE00B4YBJ215</td><td>0,30%</td><td>SPDR S&P 400</td><td>~2,5 Mrd. €</td></tr>
-                <tr><td>USA Small</td><td>IE00BJ38QD84</td><td>0,30%</td><td>SPDR Russell 2000</td><td>~1,5 Mrd. €</td></tr>
-                <tr><td>Europa L/M</td><td>LU0274209237</td><td>0,12%</td><td>Xtrackers MSCI Europe</td><td>~5 Mrd. €</td></tr>
-                <tr><td>Europa Small</td><td>LU0322253906</td><td>0,30%</td><td>Xtrackers Europe Small</td><td>~1,2 Mrd. €</td></tr>
-                <tr><td>Japan IMI</td><td>IE00B4L5YX21</td><td>0,12%</td><td>iShares Japan IMI</td><td>~3 Mrd. €</td></tr>
-                <tr><td>Pacific ex Jap</td><td>IE00B52MJY50</td><td>0,20%</td><td>iShares Pacific ex Jap</td><td>~1,5 Mrd. €</td></tr>
-                <tr><td>Emerging Markets</td><td>IE00BK5BR733</td><td>0,18%</td><td>iShares MSCI Emerging Markets IMI</td><td>~29 Mrd. €</td></tr>
-                <tr><td>Kanada</td><td>IE00B52SF786</td><td>0,48%</td><td>iShares MSCI Canada</td><td>~0,8 Mrd. €</td></tr>
-
-            </tbody>
-        </table>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Region</th><th>ISIN</th><th>TER</th><th>ETF Name</th><th>AUM (ca.)</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>USA Large</td><td>IE000XZSV718</td><td>0,03%</td><td>SPDR S&P 500</td><td>~10 Mrd. €</td></tr>
+                    <tr><td>USA Mid</td><td>IE00B4YBJ215</td><td>0,30%</td><td>SPDR S&P 400</td><td>~2,5 Mrd. €</td></tr>
+                    <tr><td>USA Small</td><td>IE00BJ38QD84</td><td>0,30%</td><td>SPDR Russell 2000</td><td>~1,5 Mrd. €</td></tr>
+                    <tr><td>Europa L/M</td><td>LU0274209237</td><td>0,12%</td><td>Xtrackers MSCI Europe</td><td>~5 Mrd. €</td></tr>
+                    <tr><td>Europa Small</td><td>LU0322253906</td><td>0,30%</td><td>Xtrackers Europe Small</td><td>~1,2 Mrd. €</td></tr>
+                    <tr><td>Japan IMI</td><td>IE00B4L5YX21</td><td>0,12%</td><td>iShares Japan IMI</td><td>~3 Mrd. €</td></tr>
+                    <tr><td>Pacific ex Jap</td><td>IE00B52MJY50</td><td>0,20%</td><td>iShares Pacific ex Jap</td><td>~1,5 Mrd. €</td></tr>
+                    <tr><td>Emerging Markets</td><td>IE00BK5BR733</td><td>0,18%</td><td>iShares MSCI Emerging Markets IMI</td><td>~29 Mrd. €</td></tr>
+                    <tr><td>Kanada</td><td>IE00B52SF786</td><td>0,48%</td><td>iShares MSCI Canada</td><td>~0,8 Mrd. €</td></tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <div class="card">
         <span class="tag">Strategie 6</span>
         <h2>Strategie 6: Vanguard-Regional (Fokus ohne Small-Caps)</h2>
-        <p>Favorit für Vanguard-Fans. Keine Small-Caps, dafür maximale Übersichtlichkeit und genossenschaftliche Struktur
+        <p>Favorit für Vanguard-Fans. Keine Small-Caps, dafür maximale Übersichtlichkeit und genossenschaftliche Struktur.
         Es gibt viele Vanguard Fans. Gegenüber Strategie 5 hat man immer noch die vollständige regionale Freiheit, nur ohne Small Caps,
         dafür aber 4 ETFs weniger. Die Fondvolumen sind beträchtlich. Die TER sind super. Die ETFs gibt es auch schon ewig.</p>
         
@@ -310,18 +351,20 @@
             <strong>Vorteil Kanada:</strong> Der FTSE North America deckt USA und Kanada elegant in einem Baustein ab. Das spart Komplexität gegenüber MSCI-Baukästen.
         </div>
 
-        <table>
-            <thead>
-                <tr><th>Region</th><th>ISIN</th><th>TER</th><th>AUM (ca.)</th><th>Besonderheit</th></tr>
-            </thead>
-            <tbody>
-                <tr><td>Nordamerika</td><td>IE00BK5BQW10</td><td>0,10%</td><td>~3,5 Mrd. €</td><td>Inkl. Kanada</td></tr>
-                <tr><td>Europa</td><td>IE00BK5BQX27</td><td>0,10%</td><td>~4,5 Mrd. €</td><td>..</td></tr>
-                <tr><td>Emerging Markets</td><td>IE00BK5BR733</td><td>0,22%</td><td>~3,8 Mrd. €</td><td>Inkl. China A</td></tr>
-                <tr><td>Japan</td><td>IE00BFMXYX26</td><td>0,15%</td><td>~1,8 Mrd. €</td><td>..</td></tr>
-                <tr><td>Pacific ex Jap</td><td>IE00B9F5YL18</td><td>0,15%</td><td>~0,9 Mrd. €</td><td>..</td></tr>
-            </tbody>
-        </table>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Region</th><th>ISIN</th><th>TER</th><th>AUM (ca.)</th><th>Besonderheit</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Nordamerika</td><td>IE00BK5BQW10</td><td>0,10%</td><td>~3,5 Mrd. €</td><td>Inkl. Kanada</td></tr>
+                    <tr><td>Europa</td><td>IE00BK5BQX27</td><td>0,10%</td><td>~4,5 Mrd. €</td><td>..</td></tr>
+                    <tr><td>Emerging Markets</td><td>IE00BK5BR733</td><td>0,22%</td><td>~3,8 Mrd. €</td><td>Inkl. China A</td></tr>
+                    <tr><td>Japan</td><td>IE00BFMXYX26</td><td>0,15%</td><td>~1,8 Mrd. €</td><td>..</td></tr>
+                    <tr><td>Pacific ex Jap</td><td>IE00B9F5YL18</td><td>0,15%</td><td>~0,9 Mrd. €</td><td>..</td></tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <div class="card">
@@ -333,14 +376,16 @@
             <strong>Klumpen-Vergleich:</strong> Während ein ACWI in den Top 10 ca. 25% Gewicht hat (KI-Boom), sind es beim Kommer ETF nur ca. 8%.
         </div>
 
-        <table>
-            <thead>
-                <tr><th>ETF Name</th><th>ISIN</th><th>TER</th><th>AUM (ca.)</th><th>Alter</th></tr>
-            </thead>
-            <tbody>
-                <tr><td>L&G Gerd Kommer ETF</td><td>IE0001UQQ933</td><td>0,45%</td><td>~0,9 Mrd. €</td><td>~2,5 J.</td></tr>
-            </tbody>
-        </table>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>ETF Name</th><th>ISIN</th><th>TER</th><th>AUM (ca.)</th><th>Alter</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>L&G Gerd Kommer ETF</td><td>IE0001UQQ933</td><td>0,45%</td><td>~0,9 Mrd. €</td><td>~2,5 J.</td></tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <div class="card">
@@ -357,35 +402,39 @@
             </ul>
         </div>
 
-        <table>
-            <thead>
-                <tr><th>Anteil</th><th>Komponente</th><th>ISIN</th><th>TER</th><th>Anbieter</th></tr>
-            </thead>
-            <tbody>
-                <tr><td>50%</td><td>MSCI World</td><td>IE00B4L5Y983</td><td>0,20%</td><td>iShares</td></tr>
-                <tr><td>30%</td><td>Emerging Markets IMI</td><td>IE00BKM4GZ66</td><td>0,18%</td><td>iShares</td></tr>
-                <tr><td>20%</td><td>STOXX Europe 600</td><td>LU0908500753</td><td>0,07%</td><td>BNP Paribas</td></tr>
-            </tbody>
-        </table>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Anteil</th><th>Komponente</th><th>ISIN</th><th>TER</th><th>Anbieter</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>50%</td><td>MSCI World</td><td>IE00B4L5Y983</td><td>0,20%</td><td>iShares</td></tr>
+                    <tr><td>30%</td><td>Emerging Markets IMI</td><td>IE00BKM4GZ66</td><td>0,18%</td><td>iShares</td></tr>
+                    <tr><td>20%</td><td>STOXX Europe 600</td><td>LU0908500753</td><td>0,07%</td><td>BNP Paribas</td></tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <div class="card">
         <h2>Abschluss-Vergleich aller Strategien</h2>
-        <table>
-            <thead>
-                <tr><th>Strategie</th><th>Anzahl ETFs</th><th>TER (ca.)</th><th>Vollständigkeit</th><th>Komplexität</th></tr>
-            </thead>
-            <tbody>
-                <tr><td>1. All-World</td><td>1</td><td>0,19%</td><td>85-99%</td><td>⭐</td></tr>
-                <tr><td>2. 70/30</td><td>2</td><td>0,19%</td><td>90%</td><td>⭐⭐</td></tr>
-                <tr><td>3. Full IMI</td><td>3</td><td>0,21%</td><td>99%</td><td>⭐⭐⭐</td></tr>
-                <tr><td>4. US-Balanced</td><td>3</td><td>0,14%</td><td>90%</td><td>⭐⭐⭐</td></tr>
-                <tr><td>5. 8-ETF Baukasten</td><td>8</td><td>0,10%</td><td>99%</td><td>⭐⭐⭐⭐⭐</td></tr>
-                <tr><td>6. Vanguard Regional</td><td>5</td><td>0,12%</td><td>90%</td><td>⭐⭐⭐⭐</td></tr>
-                <tr><td>7. Gerd Kommer</td><td>1</td><td>0,45%</td><td>99% + Faktoren</td><td>⭐</td></tr>
-                <tr><td>8. 50/30/20</td><td>3</td><td>0,16%</td><td>90%</td><td>⭐⭐</td></tr>
-            </tbody>
-        </table>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Strategie</th><th>Anzahl ETFs</th><th>TER (ca.)</th><th>Vollständigkeit</th><th>Komplexität</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>1. All-World</td><td>1</td><td>0,19%</td><td>85-99%</td><td>⭐</td></tr>
+                    <tr><td>2. 70/30</td><td>2</td><td>0,19%</td><td>90%</td><td>⭐⭐</td></tr>
+                    <tr><td>3. Full IMI</td><td>3</td><td>0,21%</td><td>99%</td><td>⭐⭐⭐</td></tr>
+                    <tr><td>4. US-Balanced</td><td>3</td><td>0,14%</td><td>90%</td><td>⭐⭐⭐</td></tr>
+                    <tr><td>5. 8-ETF Baukasten</td><td>8</td><td>0,10%</td><td>99%</td><td>⭐⭐⭐⭐⭐</td></tr>
+                    <tr><td>6. Vanguard Regional</td><td>5</td><td>0,12%</td><td>90%</td><td>⭐⭐⭐⭐</td></tr>
+                    <tr><td>7. Gerd Kommer</td><td>1</td><td>0,45%</td><td>99% + Faktoren</td><td>⭐</td></tr>
+                    <tr><td>8. 50/30/20</td><td>3</td><td>0,16%</td><td>90%</td><td>⭐⭐</td></tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 
