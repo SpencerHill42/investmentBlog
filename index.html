@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio-Kompendium | Das vollständige Wissens-Archiv</title>
+    <style>
+        :root {
+            --primary: #1a365d;
+            --secondary: #2c5282;
+            --accent: #ed8936;
+            --bg: #f7fafc;
+            --text: #2d3748;
+            --white: #ffffff;
+            --danger: #e53e3e;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        h1 { margin: 0; font-size: 2.8rem; }
+        h2 { color: var(--primary); border-bottom: 3px solid var(--accent); padding-bottom: 0.5rem; margin-top: 3.5rem; }
+        h3 { color: var(--secondary); margin-top: 2rem; border-left: 4px solid var(--secondary); padding-left: 1rem; }
+        .card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+            margin-bottom: 3rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.85rem;
+        }
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        th { background-color: #edf2f7; color: var(--primary); }
+        tr:hover { background-color: #f8fafc; }
+        .quote {
+            border-left: 5px solid var(--accent);
+            padding: 1.5rem;
+            background: #fffaf0;
+            font-style: italic;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+        }
+        .tag {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+        .expert-note {
+            background: #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            margin: 1.5rem 0;
+            border-left: 5px solid var(--primary);
+        }
+        .warning {
+            border: 2px solid var(--danger);
+            padding: 1.5rem;
+            background: #fff5f5;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+        .highlight {
+            color: var(--accent);
+            font-weight: bold;
+        }
+        ul li { margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Das Portfolio-Kompendium</h1>
+    <p>Von der Effizienz der Einfachheit zur Präzision des Ingenieurs</p>
+</header>
+
+<div class="container">
+    
+    <div class="card">
+        <h2>Einleitung: Warum wir strukturieren</h2>
+        <p>Dieses Kompendium dokumentiert die Evolution des modernen Investierens. Es führt von der Erkenntnis, dass „der Markt“ kaum schlagbar ist, hin zu der Überlegung, wie man durch intelligentes Design Klumpenrisiken vermeidet und Kosten optimiert. Die folgenden acht Strategien spiegeln unterschiedliche Philosophien wider – vom radikalen Minimalismus bis hin zur granularen Kontrolle über jede Weltregion.</p>
+    </div>
+
+    <div class="card">
+        <span class="tag">Strategie 1</span>
+        <h2>Das 1-ETF-Portfolio (Die „Set & Forget“-Effizienz)</h2>
+        <p>Die einfachste Form des Investierens ist oft die effektivste. Die Kern-Logik folgt der <strong>Marktkapitalisierung</strong>: Das Portfolio passt sich automatisch dem Wandel der Weltwirtschaft an.</p>
+        
+        <h3>1. Warum Thesaurierend?</h3>
+        <p>Ich empfehle klar die thesaurierende Variante aus zwei Gründen:</p>
+        <ul>
+            <li><strong>Minimaler Aufwand:</strong> Dividenden werden automatisch reinvestiert, kein manuelles Zutun nötig.</li>
+            <li><strong>Steuerstundung:</strong> Trotz der Angleichung durch die Vorabpauschale bleibt ein gewisser Steuerstundungseffekt erhalten, da Steuern auf Gewinne erst beim Verkauf in der fernen Zukunft fällig werden.</li>
+        </ul>
+
+        <h3>2. Die Small Cap Debatte</h3>
+        <p>Die "Small Cap Prämie" existiert historisch, ist aber kein Garant für Outperformance. Ein Vergleich über die letzten 15 Jahre zeigt kaum signifikante Unterschiede. Die Entscheidung für 99% Abdeckung (IMI) ist oft eher eine psychologische Frage der Vollständigkeit als ein Rendite-Turbo.</p>
+
+        <h3>3. Auswahlkriterien jenseits der TER</h3>
+        <p>Die reine Kostenquote (TER) ist trügerisch. Achte stattdessen auf:</p>
+        <ul>
+            <li><strong>Größe der Anteilsklasse (AUM):</strong> Größere Fonds sind liquider und profitabler für den Anbieter.</li>
+            <li><strong>Anbieter-Stabilität:</strong> Anbieter wie iShares und Vanguard sind vorzuziehen.</li>
+        </ul>
+        <div class="warning">
+            <strong>Gefahr:</strong> Eine Liquidation zwingt dich zum Verkauf, was Steuern auf alle bisherigen Gewinne sofort fällig macht – dieser "Steuerfraß" wiegt meist deutlich schwerer als eine geringfügig höhere TER.
+        </div>
+
+        <table>
+            <thead>
+                <tr><th>Index-Kandidaten</th><th>ISIN</th><th>TER</th><th>Abdeckung</th><th>AUM (ca.)</th><th>Besonderheit</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Vanguard FTSE All-World</td><td>IE00BK5BQT80</td><td>0,22%</td><td>~90-95%</td><td>~25 Mrd. €</td><td>Der Goldstandard</td></tr>
+                <tr><td>iShares MSCI ACWI</td><td>IE00B6R52259</td><td>0,20%</td><td>~85%</td><td>~12 Mrd. €</td><td>Marktführer-Alternative</td></tr>
+                <tr><td>SPDR MSCI ACWI IMI</td><td>IE00B3YLTY66</td><td>0,17%</td><td>~99%</td><td>~8 Mrd. €</td><td>Inkl. Small Caps</td></tr>
+                <tr><td>Amundi Prime All Country</td><td>IE0009HF1MK9</td><td>0,07%</td><td>~85%</td><td>~1,2 Mrd. €</td><td>Preisbrecher</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <span class="tag">Strategie 2</span>
+        <h2>Strategie 2: Das klassische 70/30-Portfolio</h2>
+        <p>Das 70/30-Modell ist der wohl bekannteste Ansatz für Anleger, die eine bewusste Gewichtung der Weltregionen anstreben und nicht stur der Marktkapitalisierung folgen wollen.</p>
+        
+        <h3>Die Core-Logik: Warum 30% Schwellenländer?</h3>
+        <ul>
+            <li><strong>BIP-Gewichtung:</strong> In einem Standard-ACWI machen Schwellenländer nur ca. 10% aus. 70/30 rückt das Portfolio näher an die reale Wirtschaftsleistung (BIP).</li>
+            <li><strong>Markowitz-Optimierung:</strong> Historische Rückrechnungen zeigen oft, dass bei ca. 30% EM die ideale Sharpe Ratio (Rendite-Risiko-Verhältnis) lag.</li>
+        </ul>
+
+        <div class="warning">
+            <strong>Deine kritische Einordnung:</strong> "Markowitz ist kein Blick in die Kristallkugel." Nur weil 30% in der Vergangenheit optimal waren, muss das nicht für die Zukunft gelten. 
+            <br><br>
+            <strong>Das Exposure-Problem:</strong> Viele Unternehmen im MSCI World erzielen gewaltige Umsätze in Schwellenländern. Wer stur nach BIP gewichtet, übersieht dieses indirekte Exposure und gewichtet EM faktisch oft doppelt.
+        </div>
+
+        <table>
+            <thead>
+                <tr><th>Komponente</th><th>ISIN</th><th>TER</th><th>Zweck</th><th>AUM (ca.)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>70% MSCI World (Core)</td><td>IE00B4L5Y983</td><td>0,20%</td><td>Industrieländer</td><td>~75 Mrd. €</td></tr>
+                <tr><td>30% EM IMI (Core)</td><td>IE00BKM4GZ66</td><td>0,18%</td><td>Schwellenl. inkl. Small</td><td>~20 Mrd. €</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <span class="tag">Strategie 3</span>
+        <h2>Strategie 3: Das 3-ETF-Portfolio (Die „Vollständige Welt“)</h2>
+        <p>Hier werden die Small Caps der entwickelten Welt explizit ergänzt, um die Industrieländer-Abdeckung von 85% auf nahezu 100% zu heben.</p>
+        
+        <h3>Warum diese Komplexität?</h3>
+        <p>Der Standard MSCI World lässt ca. 15% der Marktkapitalisierung (ca. 4.000 Unternehmen) weg. Durch die Beimischung des Small Cap ETFs schließt du diese Lücke.</p>
+        
+        <div class="expert-note">
+            <strong>Die "1%-Lücke":</strong> Theoretisch fehlen selbst hier noch die "Micro Caps". Diese machen etwa 1% der Welt aus, sind aber aufgrund mangelnder Liquidität kaum sinnvoll abzubilden. Dieses Modell ist das Maximum an investierbarer Diversifikation.
+        </div>
+
+        <table>
+            <thead>
+                <tr><th>Gewichtung</th><th>Komponente</th><th>ISIN</th><th>TER</th><th>Abdeckung</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>59,5%</td><td>MSCI World (Large/Mid)</td><td>IE00B4L5Y983</td><td>0,20%</td><td>Industrie Basis</td></tr>
+                <tr><td>10,5%</td><td>MSCI World Small Cap</td><td>IE00BF4RFH31</td><td>0,35%</td><td>Industrie Smalls</td></tr>
+                <tr><td>30,0%</td><td>Emerging Markets IMI</td><td>IE00BKM4GZ66</td><td>0,18%</td><td>Schwellenl. Full</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <span class="tag">Strategie 4</span>
+        <h2>Strategie 4: Das US-Balanced Portfolio (Gerd Kommer Logik)</h2>
+        <p>Dieses Portfolio setzt auf eine bewusste Regional-Steuerung, um die aktuelle US-Dominanz (fast 70% im MSCI World) zu begrenzen.</p>
+        
+        <div class="quote">
+            <strong>Das philosophische Duell:</strong><br>
+            "Never bet against America" (Buffett) vs. "Diversifikation ist das einzige Free Lunch" (Kommer).
+        </div>
+
+        <h3>Der "Light"-Kommer Ansatz</h3>
+        <p>Mit dem <strong>MSCI World ex USA</strong> lässt sich das US-Gewicht auf 40-50% herunterschrauben. Man imitiert die regionale Verteilung des Gerd Kommer ETFs, ohne dessen höhere Gebührenstruktur zu tragen.</p>
+
+        <table>
+            <thead>
+                <tr><th>Baustein</th><th>ISIN</th><th>TER</th><th>Zweck</th><th>AUM (ca.)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>S&P 500 (USA)</td><td>IE00B5BMR087</td><td>0,07%</td><td>USA Core</td><td>~90 Mrd. €</td></tr>
+                <tr><td>MSCI World ex USA</td><td>IE000R4ZNTN3</td><td>0,15%</td><td>Industriel. ohne USA</td><td>~1,8 Mrd. €</td></tr>
+                <tr><td>EM IMI</td><td>IE00BKM4GZ66</td><td>0,18%</td><td>Schwellenländer</td><td>~20 Mrd. €</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <span class="tag">Strategie 5</span>
+        <h2>Strategie 5: Das 8-ETF-Portfolio (Die maximale Freiheit)</h2>
+        <p>Der maßgeschneiderte Anzug: Jede Region wird einzeln abgebildet. Dies ermöglicht eine gewichtete <strong>TER von ca. 0,10%</strong>.</p>
+        
+        <div class="expert-note">
+            <strong>Psychologie vs. Performance:</strong> Im 8-ETF-Depot hast du immer eine "Looser-Position", die dich rot anstarrt (z.B. Pazifik ex Japan). Die Versuchung, die Strategie zu brechen, ist hier am höchsten.
+        </div>
+
+        <table>
+            <thead>
+                <tr><th>Region</th><th>ISIN</th><th>TER</th><th>ETF Name</th><th>AUM (ca.)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>USA Large</td><td>IE000XZSV718</td><td>0,03%</td><td>SPDR S&P 500</td><td>~10 Mrd. €</td></tr>
+                <tr><td>USA Mid</td><td>IE00B4YBJ215</td><td>0,30%</td><td>SPDR S&P 400</td><td>~2,5 Mrd. €</td></tr>
+                <tr><td>USA Small</td><td>IE00BJ38QD84</td><td>0,30%</td><td>SPDR Russell 2000</td><td>~1,5 Mrd. €</td></tr>
+                <tr><td>Europa L/M</td><td>LU0274209237</td><td>0,12%</td><td>Xtrackers MSCI Europe</td><td>~5 Mrd. €</td></tr>
+                <tr><td>Europa Small</td><td>LU0322253906</td><td>0,30%</td><td>Xtrackers Europe Small</td><td>~1,2 Mrd. €</td></tr>
+                <tr><td>Japan IMI</td><td>IE00B4L5YX21</td><td>0,12%</td><td>iShares Japan IMI</td><td>~3 Mrd. €</td></tr>
+                <tr><td>Pacific ex Jap</td><td>IE00B52MJY50</td><td>0,20%</td><td>iShares Pacific ex Jap</td><td>~1,5 Mrd. €</td></tr>
+                <tr><td>Kanada</td><td>IE00B52SF786</td><td>0,48%</td><td>iShares MSCI Canada</td><td>~0,8 Mrd. €</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <span class="tag">Strategie 6</span>
+        <h2>Strategie 6: Vanguard-Regional (Fokus ohne Small-Caps)</h2>
+        <p>Favorit für Vanguard-Fans. Keine Small-Caps, dafür maximale Übersichtlichkeit und genossenschaftliche Struktur.</p>
+        
+        <div class="expert-note">
+            <strong>Vorteil Kanada:</strong> Der FTSE North America deckt USA und Kanada elegant in einem Baustein ab. Das spart Komplexität gegenüber MSCI-Baukästen.
+        </div>
+
+        <table>
+            <thead>
+                <tr><th>Region</th><th>ISIN</th><th>TER</th><th>AUM (ca.)</th><th>Besonderheit</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Nordamerika</td><td>IE00BK5BQW10</td><td>0,10%</td><td>~3,5 Mrd. €</td><td>Inkl. Kanada</td></tr>
+                <tr><td>Europa</td><td>IE00BK5BQX27</td><td>0,10%</td><td>~4,5 Mrd. €</td><td>Developed</td></tr>
+                <tr><td>Emerging Markets</td><td>IE00BK5BR733</td><td>0,22%</td><td>~3,8 Mrd. €</td><td>Inkl. China A</td></tr>
+                <tr><td>Japan</td><td>IE00BFMXYX26</td><td>0,15%</td><td>~1,8 Mrd. €</td><td>Large/Mid</td></tr>
+                <tr><td>Pacific ex Jap</td><td>IE00B9F5YL18</td><td>0,15%</td><td>~0,9 Mrd. €</td><td>Ausschüttend</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <span class="tag">Strategie 7</span>
+        <h2>Strategie 7: Der „Gerd Kommer“ Ansatz (Wissenschaft)</h2>
+        <p>Wissenschaftliche Quintessenz: Multifactor-Investing, 50/50 Gewichtung (BIP/Market Cap) und 1%-Einzelwert-Cap.</p>
+        
+        <div class="expert-note">
+            <strong>Klumpen-Vergleich:</strong> Während ein ACWI in den Top 10 ca. 25% Gewicht hat (KI-Boom), sind es beim Kommer ETF nur ca. 8%.
+        </div>
+
+        <table>
+            <thead>
+                <tr><th>ETF Name</th><th>ISIN</th><th>TER</th><th>AUM (ca.)</th><th>Alter</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>L&G Gerd Kommer ETF</td><td>IE0001UQQ933</td><td>0,45%</td><td>~0,9 Mrd. €</td><td>~2,5 J.</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <span class="tag">Strategie 8</span>
+        <h2>Strategie 8: Das 50/30/20-Portfolio (Die „Reparatur“)</h2>
+        <p>Oft kein geplanter Start, sondern eine evolutionsbedingte Lösung für Bestandshalter zur US-Verwässerung.</p>
+        
+        <div class="warning">
+            <strong>Ingenieurs-Urteil:</strong> Mathematisch unsauber. 
+            <ul>
+                <li><strong>Redundanz:</strong> Double Exposure bei Europa-Titeln (World + Stoxx 600).</li>
+                <li><strong>Japan-Vergessen:</strong> Japan bleibt massiv unterrepräsentiert.</li>
+            </ul>
+            Es ist der „VW Golf“ unter den Depots: Er fährt, aber er hat keine Seele.
+        </div>
+
+        <table>
+            <thead>
+                <tr><th>Anteil</th><th>Komponente</th><th>ISIN</th><th>TER</th><th>Anbieter</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>50%</td><td>MSCI World</td><td>IE00B4L5Y983</td><td>0,20%</td><td>iShares</td></tr>
+                <tr><td>30%</td><td>Emerging Markets IMI</td><td>IE00BKM4GZ66</td><td>0,18%</td><td>iShares</td></tr>
+                <tr><td>20%</td><td>STOXX Europe 600</td><td>LU0908500753</td><td>0,07%</td><td>BNP Paribas</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>Abschluss-Vergleich aller Strategien</h2>
+        <table>
+            <thead>
+                <tr><th>Strategie</th><th>Anzahl ETFs</th><th>TER (ca.)</th><th>Vollständigkeit</th><th>Komplexität</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1. All-World</td><td>1</td><td>0,19%</td><td>90-99%</td><td>⭐</td></tr>
+                <tr><td>2. 70/30</td><td>2</td><td>0,19%</td><td>90%</td><td>⭐⭐</td></tr>
+                <tr><td>3. Full IMI</td><td>3</td><td>0,21%</td><td>99%</td><td>⭐⭐⭐</td></tr>
+                <tr><td>4. US-Balanced</td><td>3</td><td>0,14%</td><td>90%</td><td>⭐⭐⭐</td></tr>
+                <tr><td>5. 8-ETF Baukasten</td><td>8</td><td>0,10%</td><td>99%</td><td>⭐⭐⭐⭐⭐</td></tr>
+                <tr><td>6. Vanguard Regional</td><td>5</td><td>0,12%</td><td>90%</td><td>⭐⭐⭐⭐</td></tr>
+                <tr><td>7. Gerd Kommer</td><td>1</td><td>0,45%</td><td>99% + Faktoren</td><td>⭐</td></tr>
+                <tr><td>8. 50/30/20</td><td>3</td><td>0,16%</td><td>Unsauber</td><td>⭐⭐</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
